@@ -1,0 +1,33 @@
+package com.sci;
+
+public class shop {
+
+	public static void main(String[] args) {
+		//cash = 100000;
+		//menu = ?;
+		//qty = ?;
+		int cash = 100000;
+		int menu = "apple";
+		int qty = 10;
+		
+	            if (menu == 1) {
+	                showMenu();
+              
+	            }
+	            int totalCost = menu * qty;
+	            cash -= totalCost;
+	            System.out.println("Successfully bought " + qty + " apples for " + totalCost + "MMK.");
+	            System.out.println("Remaining cash: " + cash + "MMK");
+
+	}
+	
+	
+
+	private static void showMenu() {
+		// TODO Auto-generated method stub
+		System.out.println("1. Apple -> 1500MMK");
+		System.out.println("2. Orange -> 500MMK");
+		System.out.println("1. Mango -> 1000MMK");
+	}
+
+}
