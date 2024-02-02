@@ -1,14 +1,29 @@
 import java.util.Arrays;
-
+import java.util.Scanner;
 public class HelloWorld {
 
 	public static void main(String[] args) {  
-        int [][][] numArray = new int [3][3][4];
-//        System.out.println(numArray);
-        numArray [0][1][1]= 10;
-        numArray [1][0][1] = 40;
-        numArray [2][1][3] = 40;
-        System.out.println(Arrays.deepToString(numArray));
+		 Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter cash: ");
+	        int cash = scanner.nextInt();
+
+	        ShoppingCart shoppingCart = new ShoppingCart(cash);
+
+	        System.out.println("Cash amount: " + cash + " Ks");
+
+	        System.out.print("Enter Menu: ");
+	        int menu = scanner.nextInt();
+
+	        System.out.print("Enter qty: ");
+	        int qty = scanner.nextInt();
+
+	        shoppingCart.addItem(menu, qty);
+
+	        shoppingCart.displayRemainingAmount();
+
+	        scanner.close();
+	    }
 	}
 
-}
+
